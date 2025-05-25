@@ -7,7 +7,8 @@ from langchain_core.prompts import ChatPromptTemplate
 import os
 
 load_dotenv()
-groq_api_key = os.getenv('GROQ_API_KEY')
+#groq_api_key = os.getenv('GROQ_API_KEY')
+groq_api_key = st.secrets["GROQ_API_KEY"]
 def get_llm_response(query,chat_history):
 
     template = """
