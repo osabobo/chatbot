@@ -31,7 +31,7 @@ def get_llm_response(user_input, chat):
         """
     prompt = ChatPromptTemplate.from_template(template)
 
-    llm = ChatGroq(model="llama-3.1-70b-versatile")
+    llm = ChatGroq(model="llama-3.3-70b-versatile")
 
     chain = prompt | llm | StrOutputParser()
 
