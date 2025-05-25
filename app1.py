@@ -9,8 +9,8 @@ import os
 load_dotenv()
 # Get the GROQ_API_KEY from environment variables
 # Get the GROQ_API_KEY from environment variables
-groq_api_key = os.getenv('GROQ_API_KEY')
-
+#groq_api_key = os.getenv('GROQ_API_KEY')
+groq_api_key = st.secrets["GROQ_API_KEY"]
 # Check if the API key is present
 if groq_api_key is None:
     raise ValueError("Did not find groq_api_key, please add an environment variable `GROQ_API_KEY` which contains it, or pass `groq_api_key` as a named parameter.")
