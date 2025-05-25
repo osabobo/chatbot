@@ -8,9 +8,9 @@ import os
 
 load_dotenv()
 #groq_api_key = os.getenv('GROQ_API_KEY')
-groq_api_key = st.secrets["GROQ_API_KEY"]
+#groq_api_key = st.secrets["GROQ_API_KEY"]
 def get_llm_response(query,chat_history):
-
+    groq_api_key = st.secrets["GROQ_API_KEY"]
     template = """
     You are a helpful assistant. Answer the following questions considering the history of the conversation:
     
